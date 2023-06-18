@@ -2,6 +2,7 @@ package com.example.imagedownload;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +15,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 
@@ -60,7 +65,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         btnDownloadFileAsync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                DownloadTask downloadTask = new DownloadTask((ImageView) findViewById(R.id.image_view));
+                downloadTask.execute(IMAGE_SOURCE);
             }
         });
 
