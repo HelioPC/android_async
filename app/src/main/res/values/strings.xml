@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ImageDownload</string>
+    <string name="action_settings">Settings</string>
+    <string name="download_success">Successfully retrieved file!</string>
+    <string name="download_failed_stream">Failed decoding file from stream!</string>
+    <string name="download_failed">Failed decoding file!</string>
+    <string name="download_started">Download started…</string>
+    <string name="download_file">Download file Thread + Handler</string>
+    <string name="click_to_start">click to start</string>
+    <string name="download_file_async">Download File AsyncTask</string>
+</resources>
